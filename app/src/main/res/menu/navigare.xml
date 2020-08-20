@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_anunturi"
+        android:icon="@drawable/ic_baseline_dynamic_feed_24"
+        android:title="Navigare"/>
+
+    <item
+        android:id="@+id/nav_inscrieri"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="Inscrieri"/>
+
+    <item
+        android:id="@+id/nav_acasa"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Acasa"/>
+
+    <item
+        android:id="@+id/nav_cantina"
+        android:icon="@drawable/ic_baseline_fastfood_24"
+        android:title="Cantina"/>
+
+    <item
+        android:id="@+id/nav_plangeri"
+        android:icon="@drawable/ic_baseline_emoji_people_24"
+        android:title="Plangeri"/>
+
+</menu>

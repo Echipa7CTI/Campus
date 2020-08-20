@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titlu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Campusul universitatii"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="26sp"
+        />
+
+    <TextView
+        android:id="@+id/titlu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dunarea de Jos Galati"
+        android:layout_below="@+id/titlu1"
+        android:layout_centerHorizontal="true"
+        android:textSize="29sp"
+        />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/titlu2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/image2"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emailTIL"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/logo">
+        <EditText
+            android:layout_marginTop="30dp"
+            android:id="@+id/emailEt"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/passwordTIL"
+        android:layout_below="@+id/emailTIL"
+        app:passwordToggleEnabled="true"
+        >
+        <EditText
+            android:id="@+id/passwordEt"
+            android:inputType="textPassword"
+            android:hint="Parola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/loginBtn"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="Logare"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/passwordTIL"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/creaza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creaza cont"
+        android:layout_below="@+id/loginBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textSize="17sp"/>
+
+</RelativeLayout>
