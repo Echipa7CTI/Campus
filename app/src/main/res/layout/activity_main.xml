@@ -26,7 +26,7 @@
         android:textSize="29sp"
         />
 
-    <!--<ImageView
+    <ImageView
         android:id="@+id/logo"
         android:layout_width="220dp"
         android:layout_height="220dp"
@@ -34,7 +34,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:src="@drawable/image2"
-        />-->
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="340dp"
