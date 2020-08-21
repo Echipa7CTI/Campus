@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CantinaAdmActivity">
+    
+    <ScrollView
+        android:id="@+id/listaMancare"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/listaMancare"
+        android:background="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/adaugaMancareTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adauga mancare"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/listaMancare"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/numeMancare"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/adaugaMancareTv"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Nume mancare"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/pretMancare"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/numeMancare"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Pret mancare"
+        android:textAlignment="center"/>
+
+    <Spinner
+        android:id="@+id/tipMancare"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/pretMancare"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/adaugaMancareBtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tipMancare"
+        android:text="Adauga"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+
+</RelativeLayout>

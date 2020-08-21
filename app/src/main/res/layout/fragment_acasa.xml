@@ -5,16 +5,8 @@
     <RelativeLayout
         android:id="@+id/rel_titlu"
         android:layout_width="match_parent"
-        android:layout_height="110dp">
-
-        <TextView
-            android:id="@+id/titlu1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home"
-            android:layout_centerHorizontal="true"
-            android:textSize="28sp"
-            android:layout_marginTop="15dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
 
         <TextView
             android:id="@+id/titlu2"
@@ -23,7 +15,8 @@
             android:text="Campus UGAL"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/titlu1"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:textColor="@color/colorBlack"/>
 
     </RelativeLayout>
 
@@ -32,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/navigare"
-        android:layout_below="@+id/rel_titlu">
+        android:layout_below="@+id/rel_titlu"
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -42,18 +36,22 @@
                 android:id="@+id/text_home1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="          Răspunzând activ la solicitările şi cerinţele normelor de convieţuire specifice vieţii studenţeşti, Universitatea „Dunărea de Jos” aloca o atenţie deosebită cazării studenţilor români, studenţilor străini care vin la studii în baza unor acorduri de cooperare sau prin programele internaţionale (CEEPUS, ERASMUS, SOCRATES), cadrelor didactice din străinătate şi invitaţi ai Universităţii noastre cu ocazia unor conferinţe, simpozioane, şcoli de vară, comisii de doctorat, punând la dispoziţie spaţii de cazare moderne conform standardelor europene."
-                android:textSize="18sp" />
+                android:text="Răspunzând activ la solicitările şi cerinţele normelor de convieţuire specifice vieţii studenţeşti, Universitatea „Dunărea de Jos” aloca o atenţie deosebită cazării studenţilor români, studenţilor străini care vin la studii în baza unor acorduri de cooperare sau prin programele internaţionale (CEEPUS, ERASMUS, SOCRATES), cadrelor didactice din străinătate şi invitaţi ai Universităţii noastre cu ocazia unor conferinţe, simpozioane, şcoli de vară, comisii de doctorat, punând la dispoziţie spaţii de cazare moderne conform standardelor europene."
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/text_home2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="        Spaţiile de cazare, servirea mesei şi petrecerea timpului liber, aflate în patrimoniul Universităţii “Dunărea de Jos” sunt formate din 11 cămine, o cantină restaurant, o capelă studenţească, două săli de sport, un cabinet medical studenţesc.
+                android:text="Spaţiile de cazare, servirea mesei şi petrecerea timpului liber, aflate în patrimoniul Universităţii “Dunărea de Jos” sunt formate din 11 cămine, o cantină restaurant, o capelă studenţească, două săli de sport, un cabinet medical studenţesc.
 Capacitatea de cazare în căminele studenţeşti depăşeşte 3000 de locuri."
                 android:layout_below="@+id/text_home1"
                 android:textSize="18sp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"/>
 
             <!--<iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1399.4062407779554!2d28.051382431806516!3d45.45343473132474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sro!2sro!4v1598020561328!5m2!1sro!2sro"
@@ -83,36 +81,43 @@ Capacitatea de cazare în căminele studenţeşti depăşeşte 3000 de locuri."
                     android:id="@+id/text_A1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Numar camere:84       Numar locuri:252"
+                    android:text="Numar camere:84"
                     android:textSize="15dp" />
                 <TextView
                     android:id="@+id/text_A2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Studenti cazati/camera: 3"
+                    android:text="Numar locuri:252"
                     android:textSize="15dp"
                     android:layout_below="@+id/text_A1"/>
                 <TextView
                     android:id="@+id/text_A3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Grup sanitar: in fiecare camera"
+                    android:text="Studenti cazati/camera: 3"
                     android:textSize="15dp"
-                    android:layout_below="@id/text_A2"/>
+                    android:layout_below="@+id/text_A2"/>
                 <TextView
                     android:id="@+id/text_A4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sef camin: Profir Nicoleta    email:nico.profi@student.ugal.ro"
+                    android:text="Grup sanitar: in fiecare camera"
                     android:textSize="15dp"
                     android:layout_below="@id/text_A3"/>
                 <TextView
                     android:id="@+id/text_A5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Admin: Popazu Eliza    email:ppz.elz@gmail.com"
+                    android:text="Sef camin: Profir Nicoleta    email:nico.profi@student.ugal.ro"
                     android:textSize="15dp"
                     android:layout_below="@id/text_A4"/>
+                <TextView
+                    android:id="@+id/text_A6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Popazu Eliza    email:ppz.elz@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_A5"/>
             </RelativeLayout>
 
                                 <!--########### Camin B ###########-->
@@ -134,36 +139,43 @@ Capacitatea de cazare în căminele studenţeşti depăşeşte 3000 de locuri."
                     android:id="@+id/text_B1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Numar camere:92       Numar locuri:368"
+                    android:text="Numar camere: 92"
                     android:textSize="15dp" />
                 <TextView
                     android:id="@+id/text_B2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Studenti cazati/camera: 4"
+                    android:text="Numar locuri: 368"
                     android:textSize="15dp"
                     android:layout_below="@+id/text_B1"/>
                 <TextView
                     android:id="@+id/text_B3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Grup sanitar: modul la 2 camere"
+                    android:text="Studenti cazati/camera: 4"
                     android:textSize="15dp"
-                    android:layout_below="@id/text_B2"/>
+                    android:layout_below="@+id/text_B2"/>
                 <TextView
                     android:id="@+id/text_B4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sef camin: Bogatu gabriel    email:bogatu96@student.ugal.ro"
+                    android:text="Grup sanitar: modul la 2 camere"
                     android:textSize="15dp"
                     android:layout_below="@id/text_B3"/>
                 <TextView
                     android:id="@+id/text_B5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Admin: Popazu Eliza    email:ppz.elz@gmail.com"
+                    android:text="Sef camin: Bogatu gabriel    email:bogatu96@student.ugal.ro"
                     android:textSize="15dp"
                     android:layout_below="@id/text_B4"/>
+                <TextView
+                    android:id="@+id/text_B6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Popazu Eliza    email:ppz.elz@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_B5"/>
             </RelativeLayout>
 
 
@@ -186,36 +198,43 @@ Capacitatea de cazare în căminele studenţeşti depăşeşte 3000 de locuri."
                     android:id="@+id/text_C1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Numar camere:70       Numar locuri:280"
+                    android:text="Numar camere:70"
                     android:textSize="15dp" />
                 <TextView
                     android:id="@+id/text_C2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Studenti cazati/camera: 4"
+                    android:text="Numar locuri:280"
                     android:textSize="15dp"
                     android:layout_below="@+id/text_C1"/>
                 <TextView
                     android:id="@+id/text_C3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Grup sanitar: modul la 2 camere"
+                    android:text="Studenti cazati/camera: 4"
                     android:textSize="15dp"
-                    android:layout_below="@id/text_C2"/>
+                    android:layout_below="@+id/text_C2"/>
                 <TextView
                     android:id="@+id/text_C4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sef camin: Nicu Camelia    email:nicu.cami@student.ugal.ro"
+                    android:text="Grup sanitar: modul la 2 camere"
                     android:textSize="15dp"
                     android:layout_below="@id/text_C3"/>
                 <TextView
                     android:id="@+id/text_C5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Admin: Nechita Cosmina    email:nechi.cosmina@gmail.com"
+                    android:text="Sef camin: Nicu Camelia    email:nicu.cami@student.ugal.ro"
                     android:textSize="15dp"
                     android:layout_below="@id/text_C4"/>
+                <TextView
+                    android:id="@+id/text_C6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Nechita Cosmina    email:nechi.cosmina@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_C5"/>
             </RelativeLayout>
 
 

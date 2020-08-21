@@ -18,6 +18,10 @@ public class HomeActivity extends AppCompatActivity {
 
         BottomNavigationView nav = findViewById(R.id.navigare);
         nav.setOnNavigationItemSelectedListener(navListener);
+
+        if (savedInstanceState == null) {
+            nav.setSelectedItemId(R.id.nav_acasa);
+        }
     }
 
         private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -49,4 +53,5 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
                     }
                 };
+
 }

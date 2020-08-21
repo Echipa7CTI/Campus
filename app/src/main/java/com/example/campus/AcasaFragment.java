@@ -13,8 +13,8 @@ import androidx.fragment.app.Fragment;
 
 public class AcasaFragment extends Fragment {
 
-    Button caminAbtn, caminBbtn;
-    RelativeLayout caminArel, caminBrel;
+    Button caminAbtn, caminBbtn, caminCbtn;
+    RelativeLayout caminArel, caminBrel, caminCrel;
 
     @Nullable
     @Override
@@ -23,11 +23,14 @@ public class AcasaFragment extends Fragment {
 
         caminAbtn = view.findViewById(R.id.buton_A);
         caminBbtn = view.findViewById(R.id.buton_B);
+        caminCbtn = view.findViewById(R.id.buton_C);
         caminArel = view.findViewById(R.id.rel_A);
         caminBrel = view.findViewById(R.id.rel_B);
+        caminCrel = view.findViewById(R.id.rel_C);
 
         caminArel.setVisibility(View.GONE);
         caminBrel.setVisibility(View.GONE);
+        caminCrel.setVisibility(View.GONE);
 
         // Buton Camin A -->  info
         caminAbtn.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +54,19 @@ public class AcasaFragment extends Fragment {
                 }
                 else {
                     caminBrel.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        // Buton Camin C -->  info
+        caminCbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (caminCrel.getVisibility() == View.GONE) {
+                    caminCrel.setVisibility(View.VISIBLE);
+                }
+                else {
+                    caminCrel.setVisibility(View.GONE);
                 }
             }
         });
