@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <!--Doar conturile de UGAL sunt valide pentru inregistrare
-    Dupa inregistrare veti primi un email de confirmare-->
-
     <TextView
         android:id="@+id/titlu"
         android:layout_width="wrap_content"

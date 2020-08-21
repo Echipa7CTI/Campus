@@ -4,7 +4,7 @@
     <item
         android:id="@+id/nav_anunturi"
         android:icon="@drawable/ic_baseline_dynamic_feed_24"
-        android:title="Navigare"/>
+        android:title="Anunturi"/>
 
     <item
         android:id="@+id/nav_inscrieri"
