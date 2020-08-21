@@ -237,6 +237,296 @@ Capacitatea de cazare în căminele studenţeşti depăşeşte 3000 de locuri."
                     android:layout_below="@id/text_C5"/>
             </RelativeLayout>
 
+                                <!--########### Camin D ###########-->
+            <Button
+                android:id="@+id/buton_D"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_C"
+                android:layout_marginTop="15dp"
+                android:text="Camin D"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buton_D">
+
+                <TextView
+                    android:id="@+id/text_D1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar camere:80"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/text_D2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar locuri:320"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_D1"/>
+                <TextView
+                    android:id="@+id/text_D3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Studenti cazati/camera: 4"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_D2"/>
+                <TextView
+                    android:id="@+id/text_D4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grup sanitar: 1 pe palier"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_D3"/>
+                <TextView
+                    android:id="@+id/text_D5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sef camin: Leo Mihai    email:leoleo@student.ugal.ro"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_D4"/>
+                <TextView
+                    android:id="@+id/text_D6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Nechita Cosmina    email:nechi.cosmina@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_D5"/>
+            </RelativeLayout>
+
+                            <!--########### Camin E ###########-->
+            <Button
+                android:id="@+id/buton_E"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_D"
+                android:layout_marginTop="15dp"
+                android:text="Camin E"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buton_E">
+
+                <TextView
+                    android:id="@+id/text_E1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar camere:88"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/text_E2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar locuri:352"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_E1"/>
+                <TextView
+                    android:id="@+id/text_E3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Studenti cazati/camera: 4"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_E2"/>
+                <TextView
+                    android:id="@+id/text_E4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grup sanitar: 1 pe palier"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_E3"/>
+                <TextView
+                    android:id="@+id/text_E5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sef camin: Topa Bogdan    email:topab95@student.ugal.ro"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_E4"/>
+                <TextView
+                    android:id="@+id/text_E6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Nechita Cosmina    email:nechi.cosmina@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_E5"/>
+            </RelativeLayout>
+
+                            <!--########### Camin G ###########-->
+            <Button
+                android:id="@+id/buton_G"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_E"
+                android:layout_marginTop="15dp"
+                android:text="Camin G"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_G"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buton_G">
+
+                <TextView
+                    android:id="@+id/text_G1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar camere:92"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/text_G2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar locuri:368"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_G1"/>
+                <TextView
+                    android:id="@+id/text_G3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Studenti cazati/camera: 4"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_G2"/>
+                <TextView
+                    android:id="@+id/text_G4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grup sanitar: modul la 2 camere"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_G3"/>
+                <TextView
+                    android:id="@+id/text_G5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sef camin: Popescu Ioana    email:ppioana@student.ugal.ro"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_G4"/>
+                <TextView
+                    android:id="@+id/text_G6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Popazu Eliza    email:ppz.elz@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_G5"/>
+            </RelativeLayout>
+
+                            <!--########### Camin H ###########-->
+            <Button
+                android:id="@+id/buton_H"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_G"
+                android:layout_marginTop="15dp"
+                android:text="Camin H"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_H"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buton_H">
+
+                <TextView
+                    android:id="@+id/text_H1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar camere:108"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/text_H2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar locuri:432"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_H1"/>
+                <TextView
+                    android:id="@+id/text_H3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Studenti cazati/camera: 4"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_H2"/>
+                <TextView
+                    android:id="@+id/text_H4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grup sanitar: modul la 2 camere"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_H3"/>
+                <TextView
+                    android:id="@+id/text_H5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sef camin: Apostu Alina    email:apalina@student.ugal.ro"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_H4"/>
+                <TextView
+                    android:id="@+id/text_H6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Popazu Eliza    email:ppz.elz@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_H5"/>
+            </RelativeLayout>
+
+                            <!--########### Camin LSG ###########-->
+            <Button
+                android:id="@+id/buton_LSG"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_H"
+                android:layout_marginTop="15dp"
+                android:text="Camin LSG"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_LSG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buton_LSG">
+
+                <TextView
+                    android:id="@+id/text_LSG1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar camere:84"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/text_LSG2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numar locuri:168"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_LSG1"/>
+                <TextView
+                    android:id="@+id/text_LSG3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Studenti cazati/camera: 2"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/text_LSG2"/>
+                <TextView
+                    android:id="@+id/text_LSG4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grup sanitar: in fiecare camera"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_LSG3"/>
+                <TextView
+                    android:id="@+id/text_LSG5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sef camin: Nechifor Alin    email:ncfalin@student.ugal.ro"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_LSG4"/>
+                <TextView
+                    android:id="@+id/text_LSG6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Admin: Popazu Eliza    email:ppz.elz@gmail.com"
+                    android:textSize="15dp"
+                    android:layout_below="@id/text_LSG5"/>
+            </RelativeLayout>
+
 
         </RelativeLayout>
     </ScrollView>
