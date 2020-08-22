@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -104,12 +105,8 @@ public class CantinaAdmActivity extends AppCompatActivity {
                 listMancare.clear();
                 for(DataSnapshot ds:snapshot.getChildren()){
                     Mancare mancareObj = ds.getValue(Mancare.class);
-                    String titlu = mancareObj.getNumeMancare();
-                    System.out.println("=================="+titlu);
                     listMancare.add(mancareObj);
-                    System.out.println("---------------------"+listMancare);
                 }
-                System.out.println("++++++++++++++++++++++++++"+listMancare);
                 adapterMancare.notifyDataSetChanged();
             }
 
@@ -140,4 +137,12 @@ public class CantinaAdmActivity extends AppCompatActivity {
 
         }
 
+    public void openMancareActivity(List<Mancare> arrayListMancare, int adapterPosition) {
+
+        Mancare mancare = arrayListMancare.get(adapterPosition);
+        Intent i = new Intent(CantinaAdmActivity.this, MancareActivity.class);
+        i.putExtra("mancare", mancare);
+        startActivity(i);
+
+    }
 }

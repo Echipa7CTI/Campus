@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MancareActivity">
+
+    <EditText
+        android:id="@+id/editNumeMancare"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/editPretMancare"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_below="@id/editNumeMancare"/>
+
+    <Spinner
+        android:id="@+id/editTipMancare"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editPretMancare"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/updateMancare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update mancare"
+        android:layout_below="@id/editTipMancare"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/stergeMancare"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Sterge mancare"
+        android:layout_below="@id/updateMancare"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBloodRed"/>
+
+</RelativeLayout>

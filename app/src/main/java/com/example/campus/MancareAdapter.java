@@ -55,11 +55,11 @@ public class MancareAdapter extends RecyclerView.Adapter<MancareAdapter.MancareA
             numeTxt = itemView.findViewById(R.id.numeMancareItem);
             tipTxt = itemView.findViewById(R.id.tipMancareItem);
             pretTxt = itemView.findViewById(R.id.pretMancareItem);
-            itemView.setOnLongClickListener(this);
+            //itemView.setOnLongClickListener(this);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   // ((MyPlaylistsActivity)context).openPlaylistActivity(arrayListPlaylists,getAdapterPosition());
+                    ((CantinaAdmActivity)context).openMancareActivity(arrayListMancare,getAdapterPosition());
                 }
             });
 
