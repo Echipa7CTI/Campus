@@ -5,70 +5,165 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CantinaAdmActivity">
-    
+
     <ScrollView
-        android:id="@+id/listaMancare"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
-        <ListView
+        android:layout_height="match_parent">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaMancare"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"
+                android:layout_below="@id/listaMancare"/>
+
+            <TextView
+                android:id="@+id/meniulZileiTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meniul zilei"
+                android:textSize="25sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:layout_below="@id/listaMancare"/>
+
+            <Spinner
+                android:id="@+id/tip1"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/meniulZileiTv"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                />
+
+            <Spinner
+                android:id="@+id/tip2"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tip1"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                />
+
+            <Spinner
+                android:id="@+id/tip3"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tip2"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                />
+
+            <Spinner
+                android:id="@+id/tip4"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tip3"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                />
+
+            <Spinner
+                android:id="@+id/tip5"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tip4"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                />
+
+            <Spinner
+                android:id="@+id/tip6"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tip5"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                />
+
+            <Button
+                android:id="@+id/setMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seteaza meniul zilei"
+                android:layout_below="@id/tip6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/setMenu"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/adaugaMancareTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adauga mancare noua"
+                android:textSize="25sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/setMenu"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/numeMancare"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/adaugaMancareTv"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:hint="Nume mancare"
+                android:textAlignment="center"
+                android:inputType="textCapSentences"/>
+
+            <EditText
+                android:id="@+id/pretMancare"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/numeMancare"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="Pret mancare"
+                android:textAlignment="center"
+                android:inputType="number"/>
+
+            <Spinner
+                android:id="@+id/tipMancare"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/pretMancare"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/adaugaMancareBtn"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tipMancare"
+                android:text="Adauga"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
     </ScrollView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/listaMancare"
-        android:background="@color/colorBlack"/>
-
-    <TextView
-        android:id="@+id/adaugaMancareTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Adauga mancare"
-        android:textSize="25sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/listaMancare"
-        android:layout_marginTop="50dp"
-        android:textAlignment="center"/>
-
-    <EditText
-        android:id="@+id/numeMancare"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/adaugaMancareTv"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:hint="Nume mancare"
-        android:textAlignment="center"/>
-
-    <EditText
-        android:id="@+id/pretMancare"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/numeMancare"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:hint="Pret mancare"
-        android:textAlignment="center"/>
-
-    <Spinner
-        android:id="@+id/tipMancare"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/pretMancare"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"/>
-
-    <Button
-        android:id="@+id/adaugaMancareBtn"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/tipMancare"
-        android:text="Adauga"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
-
-
 </RelativeLayout>

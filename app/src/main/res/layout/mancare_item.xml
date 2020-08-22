@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="63dp"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/numeMancareItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ciorba de perisoare"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tipMancareItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ciorba"
+            android:textSize="15sp"
+            android:layout_below="@+id/numeMancareItem"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/pretMancareItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 lei"
+            android:layout_below="@id/tipMancareItem"
+            android:textAlignment="center"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

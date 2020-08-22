@@ -1,36 +1,38 @@
 package com.example.campus;
 
 public class Mancare {
-    String nume, tip;
-    float pret;
+    String numeMancare, tipMancare, pretMancare;
 
-    public Mancare(String nume, String tip, float pret) {
-        this.nume = nume;
-        this.tip = tip;
-        this.pret = pret;
+    public Mancare(String numeMancare, String tipMancare, String pretMancare) {
+        this.numeMancare = numeMancare;
+        this.tipMancare = tipMancare;
+        this.pretMancare = pretMancare;
     }
 
-    public String getNume() {
-        return nume;
+    public Mancare() {
     }
 
-    public void setNume(String nume) {
-        this.nume = nume;
+    public String getNumeMancare() {
+        return numeMancare;
     }
 
-    public String getTip() {
-        return tip;
+    public void setNumeMancare(String numeMancare) {
+        this.numeMancare = numeMancare;
     }
 
-    public void setTip(String tip) {
-        this.tip = tip;
+    public String getTipMancare() {
+        return tipMancare;
     }
 
-    public float getPret() {
-        return pret;
+    public void setTipMancare(String tipMancare) {
+        this.tipMancare = tipMancare;
     }
 
-    public void setPret(float pret) {
-        this.pret = pret;
+    public String getPretMancare() {
+        return pretMancare;
+    }
+
+    public void setPretMancare(String pretMancare) {
+        this.pretMancare = pretMancare;
     }
 }

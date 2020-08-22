@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Campus</string>
+
+    <string-array name="tip_mancare">
+        <item>Alege tipul de mancare</item>
+        <item>Supa</item>
+        <item>Ciorba</item>
+        <item>Fel 2</item>
+        <item>Carne</item>
+        <item>Desert</item>
+    </string-array>
 </resources>
