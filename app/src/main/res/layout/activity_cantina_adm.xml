@@ -17,7 +17,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listaMancare"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="420dp" />
 
             <View
                 android:layout_width="match_parent"
@@ -36,76 +36,156 @@
                 android:textAlignment="center"
                 android:layout_below="@id/listaMancare"/>
 
-            <Spinner
-                android:id="@+id/tip1"
-                android:layout_width="200dp"
-                android:layout_height="35dp"
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
                 android:layout_below="@+id/meniulZileiTv"
                 android:layout_marginTop="40dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                />
+                android:weightSum="10"
+                android:gravity="center">
 
-            <Spinner
-                android:id="@+id/tip2"
-                android:layout_width="200dp"
-                android:layout_height="35dp"
-                android:layout_below="@+id/tip1"
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="Supa:"
+                    android:textSize="25sp"/>
 
-            <Spinner
-                android:id="@+id/tip3"
-                android:layout_width="200dp"
-                android:layout_height="35dp"
-                android:layout_below="@+id/tip2"
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                />
+                <Spinner
+                    android:id="@+id/tip1"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/meniulZileiTv"
+                    android:textAlignment="center" />
+            </LinearLayout>
 
-            <Spinner
-                android:id="@+id/tip4"
-                android:layout_width="200dp"
-                android:layout_height="35dp"
-                android:layout_below="@+id/tip3"
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear1"
                 android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                />
+                android:weightSum="10"
+                android:gravity="center">
 
-            <Spinner
-                android:id="@+id/tip5"
-                android:layout_width="200dp"
-                android:layout_height="35dp"
-                android:layout_below="@+id/tip4"
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="Ciorba:"
+                    android:textSize="25sp"/>
+                <Spinner
+                    android:id="@+id/tip2"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
 
-            <Spinner
-                android:id="@+id/tip6"
-                android:layout_width="200dp"
-                android:layout_height="35dp"
-                android:layout_below="@+id/tip5"
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear2"
                 android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                />
+                android:weightSum="10"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="Fel 2:"
+                    android:textSize="25sp"/>
+                <Spinner
+                    android:id="@+id/tip3"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear3"
+                android:layout_marginTop="10dp"
+                android:weightSum="10"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="Fel 2:"
+                    android:textSize="25sp"/>
+                <Spinner
+                    android:id="@+id/tip4"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear4"
+                android:layout_marginTop="10dp"
+                android:weightSum="10"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="Carne:"
+                    android:textSize="25sp"/>
+
+                <Spinner
+                    android:id="@+id/tip5"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear6"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear5"
+                android:layout_marginTop="10dp"
+                android:weightSum="10"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="Desert:"
+                    android:textSize="25sp"/>
+                <Spinner
+                    android:id="@+id/tip6"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/setMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Seteaza meniul zilei"
-                android:layout_below="@id/tip6"
+                android:layout_below="@id/linear6"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"/>
 
             <View
+                android:id="@+id/bara"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@+id/setMenu"
@@ -119,7 +199,7 @@
                 android:text="Adauga mancare noua"
                 android:textSize="25sp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/setMenu"
+                android:layout_below="@id/bara"
                 android:layout_marginTop="50dp"
                 android:textAlignment="center"/>
 

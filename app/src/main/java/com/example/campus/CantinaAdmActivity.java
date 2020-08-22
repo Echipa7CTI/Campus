@@ -40,6 +40,11 @@ public class CantinaAdmActivity extends AppCompatActivity {
     Button adaugaMancare;
     EditText numeMancare, pretMancare;
 
+    Spinner tip1,tip2,tip3,tip4,tip5,tip6;
+    List<String> spinnerSupa, spinnerCiorba, spinnerFel2, spinnerCarne, spinnerDesert;
+    ArrayAdapter<String> spinnerAdapter1,spinnerAdapter2,spinnerAdapter3,spinnerAdapter4,spinnerAdapter5;
+    Button setMeniu;
+
     RecyclerView listaMancare;
     List<Mancare> listMancare;
     MancareAdapter adapterMancare;
@@ -55,6 +60,32 @@ public class CantinaAdmActivity extends AppCompatActivity {
         numeMancare = findViewById(R.id.numeMancare);
         pretMancare = findViewById(R.id.pretMancare);
         listaMancare = findViewById(R.id.listaMancare);
+        setMeniu = findViewById(R.id.setMenu);
+        tip1 = findViewById(R.id.tip1);
+        tip2 = findViewById(R.id.tip2);
+        tip3 = findViewById(R.id.tip3);
+        tip4 = findViewById(R.id.tip4);
+        tip5 = findViewById(R.id.tip5);
+        tip6 = findViewById(R.id.tip6);
+
+        //setare spinnere cu mancare
+        spinnerSupa = new ArrayList<>();
+        spinnerCiorba = new ArrayList<>();
+        spinnerFel2 = new ArrayList<>();
+        spinnerCarne = new ArrayList<>();
+        spinnerDesert = new ArrayList<>();
+
+        spinnerAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerSupa);
+        tip1.setAdapter(spinnerAdapter1);
+        spinnerAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerCiorba);
+        tip2.setAdapter(spinnerAdapter2);
+        spinnerAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerFel2);
+        tip3.setAdapter(spinnerAdapter3);
+        tip4.setAdapter(spinnerAdapter3);
+        spinnerAdapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerCarne);
+        tip5.setAdapter(spinnerAdapter4);
+        spinnerAdapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerDesert);
+        tip6.setAdapter(spinnerAdapter5);
 
         //setare lista de mancaruri
         listaMancare.setHasFixedSize(true);
@@ -92,6 +123,76 @@ public class CantinaAdmActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //meniul zilei
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Mancare");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot ds:snapshot.getChildren()){
+
+                    Mancare mancareObj = ds.getValue(Mancare.class);
+                    if(Objects.equals(mancareObj.getTipMancare(), "Supa")){
+                        spinnerSupa.add(mancareObj.getNumeMancare());
+                    } else if (Objects.equals(mancareObj.getTipMancare(), "Ciorba")){
+                        spinnerCiorba.add(mancareObj.getNumeMancare());
+                    } else if (Objects.equals(mancareObj.getTipMancare(), "Fel 2")){
+                        spinnerFel2.add(mancareObj.getNumeMancare());
+                    } else if (Objects.equals(mancareObj.getTipMancare(), "Carne")){
+                        spinnerCarne.add(mancareObj.getNumeMancare());
+                    } else if (Objects.equals(mancareObj.getTipMancare(), "Desert")){
+                        spinnerDesert.add(mancareObj.getNumeMancare());
+                    }
+                }
+                spinnerAdapter1.notifyDataSetChanged();
+                spinnerAdapter2.notifyDataSetChanged();
+                spinnerAdapter3.notifyDataSetChanged();
+                spinnerAdapter4.notifyDataSetChanged();
+                spinnerAdapter5.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        setMeniu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setMenu();
+            }
+        });
+    }
+
+    private void setMenu() {
+        String supa = tip1.getSelectedItem().toString();
+        String ciorba = tip2.getSelectedItem().toString();
+        String fel2 = tip3.getSelectedItem().toString();
+        String fel22 = tip4.getSelectedItem().toString();
+        String carne = tip5.getSelectedItem().toString();
+        String desert = tip6.getSelectedItem().toString();
+
+        if(Objects.equals(fel2, fel22)){
+            Toast.makeText(CantinaAdmActivity.this, "Introdu 2 felurile 2 diferite!", Toast.LENGTH_SHORT).show();
+        } else{
+            mAuth = FirebaseAuth.getInstance();
+            firebaseDatabase = FirebaseDatabase.getInstance();
+            databaseReference = firebaseDatabase.getReference("Meniu");
+
+            HashMap<Object, String> hashMap = new HashMap<>();
+            hashMap.put("supa", supa);
+            hashMap.put("ciorba", ciorba);
+            hashMap.put("fel2", fel2);
+            hashMap.put("fel22", fel22);
+            hashMap.put("carne", carne);
+            hashMap.put("desert", desert);
+
+            databaseReference.setValue(hashMap);
+
+            Toast.makeText(CantinaAdmActivity.this, "Meniu updatat cu succes!", Toast.LENGTH_SHORT).show();
+
+        }
     }
 
     //functia de aducere a mancarii din baza de date
@@ -145,4 +246,5 @@ public class CantinaAdmActivity extends AppCompatActivity {
         startActivity(i);
 
     }
+
 }
