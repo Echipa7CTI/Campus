@@ -40,7 +40,7 @@ public class CantinaAdmActivity extends AppCompatActivity {
     Button adaugaMancare;
     EditText numeMancare, pretMancare;
 
-    Spinner tip1,tip2,tip3,tip4,tip5,tip6;
+    Spinner tip1,tip2,tip3,tip4,tip5;
     List<String> spinnerSupa, spinnerCiorba, spinnerFel2, spinnerCarne, spinnerDesert;
     ArrayAdapter<String> spinnerAdapter1,spinnerAdapter2,spinnerAdapter3,spinnerAdapter4,spinnerAdapter5;
     Button setMeniu;
@@ -66,7 +66,6 @@ public class CantinaAdmActivity extends AppCompatActivity {
         tip3 = findViewById(R.id.tip3);
         tip4 = findViewById(R.id.tip4);
         tip5 = findViewById(R.id.tip5);
-        tip6 = findViewById(R.id.tip6);
 
         //setare spinnere cu mancare
         spinnerSupa = new ArrayList<>();
@@ -81,11 +80,11 @@ public class CantinaAdmActivity extends AppCompatActivity {
         tip2.setAdapter(spinnerAdapter2);
         spinnerAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerFel2);
         tip3.setAdapter(spinnerAdapter3);
-        tip4.setAdapter(spinnerAdapter3);
         spinnerAdapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerCarne);
-        tip5.setAdapter(spinnerAdapter4);
+        tip4.setAdapter(spinnerAdapter4);
         spinnerAdapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, spinnerDesert);
-        tip6.setAdapter(spinnerAdapter5);
+        tip5.setAdapter(spinnerAdapter5);
+
 
         //setare lista de mancaruri
         listaMancare.setHasFixedSize(true);
@@ -169,30 +168,39 @@ public class CantinaAdmActivity extends AppCompatActivity {
         String supa = tip1.getSelectedItem().toString();
         String ciorba = tip2.getSelectedItem().toString();
         String fel2 = tip3.getSelectedItem().toString();
-        String fel22 = tip4.getSelectedItem().toString();
-        String carne = tip5.getSelectedItem().toString();
-        String desert = tip6.getSelectedItem().toString();
+        String carne = tip4.getSelectedItem().toString();
+        String desert = tip5.getSelectedItem().toString();
 
-        if(Objects.equals(fel2, fel22)){
-            Toast.makeText(CantinaAdmActivity.this, "Introdu 2 felurile 2 diferite!", Toast.LENGTH_SHORT).show();
-        } else{
-            mAuth = FirebaseAuth.getInstance();
-            firebaseDatabase = FirebaseDatabase.getInstance();
-            databaseReference = firebaseDatabase.getReference("Meniu");
+        mAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Meniu");
 
-            HashMap<Object, String> hashMap = new HashMap<>();
-            hashMap.put("supa", supa);
-            hashMap.put("ciorba", ciorba);
-            hashMap.put("fel2", fel2);
-            hashMap.put("fel22", fel22);
-            hashMap.put("carne", carne);
-            hashMap.put("desert", desert);
+        final String[] tipuri= {supa, ciorba, fel2, carne, desert};
+        for (int i = 0; i < tipuri.length; i++) {
+            Query query = firebaseDatabase.getReference("Mancare").orderByChild("numeMancare").equalTo(tipuri[i]);
+            final int finalI = i;
+            query.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for(DataSnapshot ds:snapshot.getChildren()){
+                        String pretMancare = ds.child("pretMancare").getValue().toString();
+                        String tipMancare = ds.child("tipMancare").getValue().toString();
 
-            databaseReference.setValue(hashMap);
+                        HashMap<Object, String> hashMap = new HashMap<>();
+                        hashMap.put("numeMancare", tipuri[finalI]);
+                        hashMap.put("pretMancare", pretMancare);
 
-            Toast.makeText(CantinaAdmActivity.this, "Meniu updatat cu succes!", Toast.LENGTH_SHORT).show();
+                        databaseReference.child(tipMancare).setValue(hashMap);
+                    }
+                }
 
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
+        Toast.makeText(CantinaAdmActivity.this, "Meniu updatat cu succes!", Toast.LENGTH_SHORT).show();
     }
 
     //functia de aducere a mancarii din baza de date
@@ -239,7 +247,6 @@ public class CantinaAdmActivity extends AppCompatActivity {
         }
 
     public void openMancareActivity(List<Mancare> arrayListMancare, int adapterPosition) {
-
         Mancare mancare = arrayListMancare.get(adapterPosition);
         Intent i = new Intent(CantinaAdmActivity.this, MancareActivity.class);
         i.putExtra("mancare", mancare);
