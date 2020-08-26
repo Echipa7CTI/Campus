@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titlu2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image2"
+        />
+
+    <Button
+        android:id="@+id/admAnunturiBtn"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true"
+        android:text="Sectiune anunturi"
+        android:textSize="15sp" />
+
+    <Button
+    android:id="@+id/admInscrieriBtn"
+    android:layout_width="240dp"
+    android:layout_height="60dp"
+    android:layout_below="@+id/admAnunturiBtn"
+    android:layout_marginTop="10dp"
+    android:layout_centerHorizontal="true"
+    android:text="Sectiune inscrieri"
+    android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/admCantinaBtn"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/admInscrieriBtn"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Sectiune cantina"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/admPlangeriBtn"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/admCantinaBtn"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Senctiune plangeri"
+        android:textSize="15sp" />
+
+</RelativeLayout>

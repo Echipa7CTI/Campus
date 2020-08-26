@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MancareActivity"></activity>
+        <activity android:name=".PlangeriAdmActivity"></activity>
+        <activity android:name=".AnunturiAdmActivity" />
+        <activity android:name=".InscrieriAdmActivity" />
+        <activity android:name=".MancareActivity" />
         <activity android:name=".CantinaAdmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -37,7 +37,7 @@ public class MancareAdapter extends RecyclerView.Adapter<MancareAdapter.MancareA
         Mancare mancare= arrayListMancare.get(position);
         holder.numeTxt.setText(mancare.getNumeMancare());
         holder.tipTxt.setText(mancare.getTipMancare());
-        holder.pretTxt.setText(mancare.getPretMancare());
+        holder.pretTxt.setText(mancare.getPretMancare()+" RON");
 
     }
 

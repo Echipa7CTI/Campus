@@ -4,4 +4,32 @@
 
 
 
+    <TextView
+        android:id="@+id/titlu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anunturi Campus UGAL"
+        android:textSize="30sp"
+        android:textColor="@color/colorBlack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <ScrollView
+        android:layout_below="@+id/titlu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaAnunturi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
