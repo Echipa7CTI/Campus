@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
     android:layout_width="380dp"
     android:layout_height="120dp"
-    android:layout_margin="15dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    app:cardElevation="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Eveniment sportiv, cupa caminelor"
             android:textSize="23sp"
-            android:layout_marginLeft="5dp"/>
+            android:textAlignment="center"/>
 
         <View
             android:id="@+id/bara"
@@ -27,9 +31,8 @@
             android:id="@+id/textAnuntItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="       Directia de camine studentesti din Galati a publicat pe propriul site calendarul după care se vor desfășura ostilitățile în ediția 2020-2021 din Futsal Champions League. Primele emoții pentru gruparea gălățeană vor fi miercuri, 2 septembrie. În această zi, începând cu ora 15.15, ora României, numele formației gălățene se va afla în premieră în urnele UEFA pentru tragerea la sorți a meciurilor din preliminarii.
-Meciurile din preliminarii sunt programate să se dispute între 13 și 18 octombrie. În această fază a competiției echipele vor fi împărțite în grupe de patru, sau trei echipe. Câștigătoarea grupei preliminare, și eventual cea mai bună de pe locul doi va avansa în următoarea fază a competiției, main round.
-Main round-ul este a doua fază a competiției, câștigătoarele din această fază vor avansa în Elitte Round, urmând ca cele mai bune patru echipe să obțină calificarea la turneul final."
+            android:text="Text anunt"
+            android:textAlignment="center"
             android:textSize="16sp"
             android:layout_below="@+id/bara"
             android:layout_marginLeft="10sp"

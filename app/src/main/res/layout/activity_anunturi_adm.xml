@@ -42,11 +42,11 @@
                 android:textAlignment="center"
                 android:inputType="textCapSentences"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/textAnunt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Scrie anuntul"
+                android:hint="Scrie anuntul"
                 android:textSize="15sp"
                 android:layout_below="@id/titluAnunt"
                 android:layout_marginTop="30dp"

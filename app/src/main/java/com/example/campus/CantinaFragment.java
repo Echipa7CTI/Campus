@@ -26,10 +26,6 @@ import java.util.Locale;
 
 public class CantinaFragment extends Fragment {
 
-    FirebaseAuth mAuth;
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
-
     TextView dataTv;
     TextView supaMeniu, ciorbaMeniu, fel2Meniu, carneMeniu, desertMeniu;
     TextView pretSupa, pretCiorba, pretFel2, pretCarne, pretDesert;
