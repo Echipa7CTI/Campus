@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnuntUserActivity"></activity>
+        <activity android:name=".ContractIndividualActivity"></activity>
+        <activity android:name=".AnuntUserActivity" />
         <activity android:name=".AnuntAdmIndividualActivity" />
         <activity android:name=".PlangeriAdmActivity" />
         <activity android:name=".AnunturiAdmActivity" />

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContractIndividualActivity">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:text="Nume: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:text="SefuBanilor"
+        android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/linear1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="Prenume: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="SefuBanilor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/linear2"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="Numele facultatii: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="SefuBanilor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@+id/linear3"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="Ciclu de studii"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/tip1"
+            android:layout_width="130dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="5dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:text="An"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/tip2"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear5"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/linear4"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="Adresa: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="SefuBanilor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear6"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/linear5"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="Numar telefon: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="SefuBanilor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear7"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/linear6"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="Camin optat: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:text="SefuBanilor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="340dp"
+        android:layout_height="215dp"
+        android:layout_below="@id/linear7"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="220dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/img1"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/descarcaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img2"
+        android:text="Descarca contractul"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:id="@+id/linear8"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/descarcaBtn"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/acceptaBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Accepta"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/respingeBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Respinge"
+            android:layout_margin="2dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
