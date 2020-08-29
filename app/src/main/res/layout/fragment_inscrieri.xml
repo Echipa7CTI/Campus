@@ -1,12 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Inscrieri"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+    <ScrollView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigare"
+        android:layout_below="@+id/rel_titlu"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titlu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Inscriere Campus A.I.Cuza"
+                android:textColor="@color/colorBlack"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titlu"
+                android:layout_marginTop="20dp"
+                android:text="         Campusul A.I.Cuza din Galati are un numar total de camere de 923, capacitatea totală de cazare fiind de aproximativ 3000 de locuri.
+Accesul studenţilor către mijloacele de transport în comun se face uşor datorită amplasării Complexelor. Serviciile de internet şi cablu TV sunt gratuite. În cămine există săli de lectură şi spaţii dotate cu maşini de spălat şi uscătoare pentru rufe."
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:layout_margin="10dp"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/citesteContractBtn"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Citeste contractul aici" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/citesteContractBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Status contract: neinregistrat"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:text="    Completati campurile de mai jos cu datele personale si adaugati poza cu buletinul dumneavoastra, precum si cu semnatura pentru a va putea trimite cererea de inscriere catre administrator."
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/atentionare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:text="* Caminele A, C, G, H sunt exclusiv pentru fete, iar caminele B, D, E sunt exclusiv pentru baieti !"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/atentionare"
+                android:layout_marginTop="15dp"
+                android:hint="Numele" />
+
+            <EditText
+                android:id="@+id/edit2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit1"
+                android:hint="Prenumele" />
+
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit2"
+                android:hint="Numele Facultatii" />
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="350dp"
+                android:layout_height="36dp"
+                android:layout_below="@+id/edit3"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:text="Ciclu de studii"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/tip1"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:text="An"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/tip2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/edit4"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:hint="Judetul si adresa domiciliului statbil" />
+
+            <EditText
+                android:id="@+id/edit5"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit4"
+                android:hint="Numarul de telefon" />
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="350dp"
+                android:layout_height="36dp"
+                android:layout_below="@+id/edit5"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:text="Caminul dorit"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/tip3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/poza1Btn"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Adauga poza buletinului" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poza1Btn"
+                android:layout_centerHorizontal="true"
+                android:text="Poza buletinului a fost incarcata" />
+
+
+            <Button
+                android:id="@+id/poza2Btn"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/poza1Btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:text="Adauga poza semanturii" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poza2Btn"
+                android:layout_centerHorizontal="true"
+                android:text="Poza semnaturii a fost incarcata" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text5"
+                android:text="Trimite cererea de inscriere"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/submitBtn"
+                android:text="Cererea dumneavoastra a fost inregistrata, va rugam sa asteptati si sa urmariti statusul contractului"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
