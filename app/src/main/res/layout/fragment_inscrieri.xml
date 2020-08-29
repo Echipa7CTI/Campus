@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/titlu"
                 android:layout_marginTop="20dp"
-                android:text="         Campusul A.I.Cuza din Galati are un numar total de camere de 923, capacitatea totală de cazare fiind de aproximativ 3000 de locuri.
+                android:text="Campusul A.I.Cuza din Galati are un numar total de camere de 923, capacitatea totală de cazare fiind de aproximativ 3000 de locuri.
 Accesul studenţilor către mijloacele de transport în comun se face uşor datorită amplasării Complexelor. Serviciile de internet şi cablu TV sunt gratuite. În cămine există săli de lectură şi spaţii dotate cu maşini de spălat şi uscătoare pentru rufe."
                 android:textAlignment="center"
                 android:textColor="@color/colorBlack"
@@ -54,7 +54,6 @@ Accesul studenţilor către mijloacele de transport în comun se face uşor dato
                 android:layout_below="@+id/citesteContractBtn"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
-                android:text="Status contract: neinregistrat"
                 android:textSize="20sp" />
 
             <TextView
@@ -65,9 +64,10 @@ Accesul studenţilor către mijloacele de transport în comun se face uşor dato
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
-                android:text="    Completati campurile de mai jos cu datele personale si adaugati poza cu buletinul dumneavoastra, precum si cu semnatura pentru a va putea trimite cererea de inscriere catre administrator."
+                android:text="Completati campurile de mai jos cu datele personale si adaugati poza cu buletinul dumneavoastra, precum si cu semnatura pentru a va putea trimite cererea de inscriere catre administrator."
                 android:textColor="@color/colorBlack"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textAlignment="center"/>
 
             <TextView
                 android:id="@+id/atentionare"
@@ -79,7 +79,8 @@ Accesul studenţilor către mijloacele de transport în comun se face uşor dato
                 android:layout_marginRight="15dp"
                 android:text="* Caminele A, C, G, H sunt exclusiv pentru fete, iar caminele B, D, E sunt exclusiv pentru baieti !"
                 android:textColor="@color/colorBlack"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textAlignment="center"/>
 
             <EditText
                 android:id="@+id/edit1"
@@ -105,7 +106,7 @@ Accesul studenţilor către mijloacele de transport în comun se face uşor dato
 
             <LinearLayout
                 android:id="@+id/linear1"
-                android:layout_width="350dp"
+                android:layout_width="400dp"
                 android:layout_height="36dp"
                 android:layout_below="@+id/edit3"
                 android:layout_marginTop="5dp"
@@ -135,7 +136,7 @@ Accesul studenţilor către mijloacele de transport în comun se face uşor dato
 
                 <Spinner
                     android:id="@+id/tip2"
-                    android:layout_width="30dp"
+                    android:layout_width="90dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="5dp"
                     android:textAlignment="center" />
@@ -174,7 +175,7 @@ Accesul studenţilor către mijloacele de transport în comun se face uşor dato
 
                 <Spinner
                     android:id="@+id/tip3"
-                    android:layout_width="30dp"
+                    android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="5dp"
                     android:textAlignment="center" />

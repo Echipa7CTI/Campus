@@ -9,4 +9,31 @@
         <item>Carne</item>
         <item>Desert</item>
     </string-array>
+
+    <string-array name="ciclu_studii">
+        <item>Licenta</item>
+        <item>Masterat</item>
+        <item>Doctorat</item>
+    </string-array>
+
+    <string-array name="an_studii">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="camin_dorit">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>G</item>
+        <item>H</item>
+        <item>LSG</item>
+    </string-array>
+
 </resources>
