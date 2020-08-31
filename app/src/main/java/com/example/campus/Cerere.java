@@ -1,6 +1,9 @@
 package com.example.campus;
 
-public class Cerere {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Cerere implements Parcelable {
     String numeStudent, prenumeStudent, numeFacultate, cicluStudii, adresa, pozaBuletin, pozaSemnatura, caminDorit, an, telefon, status, idUser;
 
     public Cerere(String numeStudent, String prenumeStudent, String numeFacultate, String cicluStudii, String adresa, String pozaBuletin, String pozaSemnatura, String caminDorit, String an, String telefon, String status, String idUser) {
@@ -21,6 +24,33 @@ public class Cerere {
     Cerere(){
 
     }
+
+    protected Cerere(Parcel in) {
+        numeStudent = in.readString();
+        prenumeStudent = in.readString();
+        numeFacultate = in.readString();
+        cicluStudii = in.readString();
+        adresa = in.readString();
+        pozaBuletin = in.readString();
+        pozaSemnatura = in.readString();
+        caminDorit = in.readString();
+        an = in.readString();
+        telefon = in.readString();
+        status = in.readString();
+        idUser = in.readString();
+    }
+
+    public static final Creator<Cerere> CREATOR = new Creator<Cerere>() {
+        @Override
+        public Cerere createFromParcel(Parcel in) {
+            return new Cerere(in);
+        }
+
+        @Override
+        public Cerere[] newArray(int size) {
+            return new Cerere[size];
+        }
+    };
 
     public String getNumeStudent() {
         return numeStudent;
@@ -116,5 +146,26 @@ public class Cerere {
 
     public void setIdUser(String idUser) {
         this.idUser = idUser;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(numeStudent);
+        parcel.writeString(prenumeStudent);
+        parcel.writeString(numeFacultate);
+        parcel.writeString(cicluStudii);
+        parcel.writeString(adresa);
+        parcel.writeString(pozaBuletin);
+        parcel.writeString(pozaSemnatura);
+        parcel.writeString(caminDorit);
+        parcel.writeString(an);
+        parcel.writeString(telefon);
+        parcel.writeString(status);
+        parcel.writeString(idUser);
     }
 }

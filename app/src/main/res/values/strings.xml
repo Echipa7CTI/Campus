@@ -36,4 +36,11 @@
         <item>LSG</item>
     </string-array>
 
+    <string-array name="tip_contract">
+        <item>Alege:</item>
+        <item>Trimis</item>
+        <item>Acceptat</item>
+        <item>Refuzat</item>
+    </string-array>
+
 </resources>

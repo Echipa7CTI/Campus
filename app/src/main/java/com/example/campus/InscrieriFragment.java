@@ -2,8 +2,10 @@ package com.example.campus;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -48,6 +50,7 @@ import java.util.List;
 import java.util.Objects;
 
 import static android.app.Activity.RESULT_OK;
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
 import static com.google.firebase.storage.FirebaseStorage.getInstance;
 
 public class InscrieriFragment extends Fragment {
@@ -58,6 +61,7 @@ public class InscrieriFragment extends Fragment {
     DatabaseReference databaseReference;
 
     StorageReference storageReference;
+    StorageReference ref;
 
     String storagePath = "Users_Buletin_Semnatura_Imgs/";
 
@@ -166,11 +170,11 @@ public class InscrieriFragment extends Fragment {
                 String nrTel = String.valueOf(telefon.getText());
                 String uid = user.getUid();
 
-                if(Objects.equals(numeCerere, "") || Objects.equals(prenumeCerere, "") || Objects.equals(numeFacultate, "") || Objects.equals(adresaCerere, "") || Objects.equals(nrTel, "") || !mesajBuletin.isShown() || !mesajSemnatura.isShown()){
-                    Toast.makeText(getActivity(), "Te rog completeaza datele corespunzator", Toast.LENGTH_SHORT).show();
-                } else if(Objects.equals(statusTv.getText(), "Status contract: trimis")) {
+                if(Objects.equals(statusTv.getText(), "Status contract: trimis")) {
                     Toast.makeText(getActivity(),"Ai trimis deja o cerere.", Toast.LENGTH_SHORT).show();
-                } else{
+                }else if(Objects.equals(numeCerere, "") || Objects.equals(prenumeCerere, "") || Objects.equals(numeFacultate, "") || Objects.equals(adresaCerere, "") || Objects.equals(nrTel, "") || !mesajBuletin.isShown() || !mesajSemnatura.isShown()) {
+                    Toast.makeText(getActivity(), "Te rog completeaza datele corespunzator", Toast.LENGTH_SHORT).show();
+                }else{
                     inregistrare(numeCerere, prenumeCerere, numeFacultate, cicluStudii, anStudii, caminDorit, adresaCerere, nrTel, uid);
                 }
             }
@@ -194,7 +198,45 @@ public class InscrieriFragment extends Fragment {
             }
         });
 
+        citesteContract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                descarcaContract();
+            }
+        });
+
         return view;
+    }
+
+    private void descarcaContract() {
+        ref=storageReference.child("Contract.docx");
+        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                String url = uri.toString();
+                downloadFile(getActivity(), "contract_original", ".docx ", DIRECTORY_DOWNLOADS, url);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+            }
+        });
+    }
+
+    private void downloadFile(Context context, String fileName, String fileExtension, String destinationDirectory, String url) {
+
+        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri uri = Uri.parse(url);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalFilesDir(context,destinationDirectory, fileName+fileExtension);
+
+        downloadManager.enqueue(request);
+
+        Toast.makeText(context, "Contract descarcat!", Toast.LENGTH_SHORT).show();
+
     }
 
     private void inregistrare(String numeCerere, String prenumeCerere, String numeFacultate, String cicluStudii, String anStudii, String caminDorit, String adresaCerere, String nrTel, String uid) {
@@ -208,7 +250,7 @@ public class InscrieriFragment extends Fragment {
         results.put("adresa", adresaCerere);
         results.put("telefon", nrTel);
         results.put("idUser", uid);
-        results.put("status", "trimis");
+        results.put("status", "Trimis");
 
         databaseReference.child(uid).updateChildren(results);
     }
