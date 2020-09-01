@@ -143,85 +143,8 @@ public class ContractIndividualActivity extends AppCompatActivity {
             }
         });
 
-        descarca.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FileOutputStream fos = null;
-                Context context=getApplicationContext();
-                try {
-                    fos = context.openFileOutput(FILE_NAME, MODE_PRIVATE);
-                    fos.write("Name: ".getBytes());
-                    fos.write("\nEmail: ".getBytes());
-                    fos.write("\nZodiac Sign: ".getBytes());
 
-                  //  Toast.makeText(context,"S-a salvat in locatia: "+ context.getFilesDir() + "/" + FILE_NAME, Toast.LENGTH_LONG).show();
-                    Uri file = Uri.fromFile(new File("path/to/images/rivers.jpg"));
-                    sendToFirebase(fos);
 
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }finally {
-                    if(fos!=null){
-                        try {
-                            fos.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-        });
-
-    }
-
-    private void sendToFirebase(FileOutputStream fos) {
-        StorageReference storageReference2nd = storageReference.child(filePathAndName);
-        storageReference2nd.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-                while (!uriTask.isSuccessful());
-                Uri downloadUri = uriTask.getResult();
-
-                if (uriTask.isSuccessful()){
-                    HashMap<String, Object> results = new HashMap<>();
-                    results.put(buletinSauSemnaturaPoza,downloadUri.toString());
-
-                    databaseReference.child(user.getUid()).updateChildren(results)
-                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    pd.dismiss();
-                                    Toast.makeText(getActivity(),"Imagine incarcata", Toast.LENGTH_SHORT).show();
-                                    if (buletinSauSemnaturaPoza == "pozaBuletin"){
-                                        mesajBuletin.setVisibility(View.VISIBLE);
-                                    } else {
-                                        mesajSemnatura.setVisibility(View.VISIBLE);
-                                    }
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            pd.dismiss();
-                            Toast.makeText(getActivity(),"Eroare la incarcarea imaginii", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-                else {
-                    pd.dismiss();
-                    Toast.makeText(getActivity(),"Eroare" , Toast.LENGTH_SHORT).show();
-
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                pd.dismiss();
-                Toast.makeText(getActivity(),e.getLocalizedMessage(),Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     private void respingeCerere() {

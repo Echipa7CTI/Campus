@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="25sp"
         android:text="Titlu anunt"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:textColor="@color/colorBlack"
         />
 
@@ -28,4 +28,52 @@
         android:text="ne-auzim"
         android:textColor="@color/colorBlack"
         />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/textAnunt"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:id="@+id/comentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="10dp"
+        android:text="Comentarii"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comentariiRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comentTv"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/addComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite">
+
+        <EditText
+            android:id="@+id/introduMesaj"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:hint="Introdu un mesaj"/>
+
+        <Button
+            android:id="@+id/trimiteMesaj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Trimite"/>
+
+    </LinearLayout>
 </RelativeLayout>
