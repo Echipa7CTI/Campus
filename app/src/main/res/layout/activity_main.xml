@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Campusul universitatii"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:textSize="26sp"
         />
 
@@ -28,11 +28,11 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_below="@+id/titlu2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/image2"
         />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:id="@+id/emailTIL"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/logo">
         <EditText
             android:layout_marginTop="30dp"
@@ -92,7 +92,7 @@
         android:text="Creaza cont"
         android:layout_below="@+id/loginBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:textSize="17sp"/>
 
 </RelativeLayout>

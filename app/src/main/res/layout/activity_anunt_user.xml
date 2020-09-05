@@ -65,7 +65,7 @@
 
         <EditText
             android:id="@+id/introduMesaj"
-            android:layout_width="310dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:hint="Introdu un mesaj"/>
 

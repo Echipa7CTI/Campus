@@ -20,13 +20,7 @@
         <activity android:name=".AnunturiAdmActivity" />
         <activity android:name=".InscrieriAdmActivity" />
         <activity android:name=".MancareActivity" />
-        <activity android:name=".CantinaAdmActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".CantinaAdmActivity"/>
         <activity android:name=".AdminActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />

@@ -45,7 +45,7 @@ Accesul studenţilor către mijloacele de transport în comun se face uşor dato
                 android:layout_below="@+id/text1"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
-                android:text="Citeste contractul aici" />
+                android:text="Descarca contractul aici" />
 
             <TextView
                 android:id="@+id/text2"
