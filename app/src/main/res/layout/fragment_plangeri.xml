@@ -3,10 +3,93 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/titlu"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Plangeri"
         android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Depune o plangere"
+        android:textSize="20sp"
+        android:layout_below="@+id/titlu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/subiectPlangere"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="10dp"
+        android:hint="Subiect" />
+
+    <EditText
+        android:id="@+id/detalierePlangere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Detaliere"
+        android:textSize="15sp"
+        android:layout_below="@id/subiectPlangere"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/trimiteBtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/detalierePlangere"
+        android:text="Trimite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plangerile tale"
+        android:textSize="20sp"
+        android:layout_below="@+id/trimiteBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="10"
+        android:layout_below="@+id/text2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Status plangeri:"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/tip1"
+            android:layout_width="180dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="5dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plangeri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear1"
+        android:layout_marginTop="10dp"/>
+
 
 </RelativeLayout>

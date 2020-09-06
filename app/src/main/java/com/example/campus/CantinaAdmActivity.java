@@ -185,18 +185,14 @@ public class CantinaAdmActivity extends AppCompatActivity {
                     for(DataSnapshot ds:snapshot.getChildren()){
                         String pretMancare = ds.child("pretMancare").getValue().toString();
                         String tipMancare = ds.child("tipMancare").getValue().toString();
-
                         HashMap<Object, String> hashMap = new HashMap<>();
                         hashMap.put("numeMancare", tipuri[finalI]);
                         hashMap.put("pretMancare", pretMancare);
-
                         databaseReference.child(tipMancare).setValue(hashMap);
                     }
                 }
-
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-
                 }
             });
         }
