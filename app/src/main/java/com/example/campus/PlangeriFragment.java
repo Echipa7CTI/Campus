@@ -142,6 +142,8 @@ public class PlangeriFragment extends Fragment {
         hashMap.put("uploadId", uploadId);
         hashMap.put("email", email);
         hashMap.put("userId", userId);
+        hashMap.put("status", "Nerevizuit");
+        hashMap.put("raspuns", "");
 
         ref.child(uploadId).setValue(hashMap);
 

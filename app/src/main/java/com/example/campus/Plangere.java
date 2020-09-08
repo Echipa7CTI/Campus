@@ -4,15 +4,16 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Plangere implements Parcelable {
-    String titlu, descriere, uploadId, email, userId, status;
+    String titlu, descriere, uploadId, email, userId, status, raspuns;
 
-    public Plangere(String titlu, String descriere, String uploadId, String email, String userId, String status) {
+    public Plangere(String titlu, String descriere, String uploadId, String email, String userId, String status, String raspuns) {
         this.titlu = titlu;
         this.descriere = descriere;
         this.uploadId = uploadId;
         this.email = email;
         this.userId = userId;
         this.status = status;
+        this.raspuns = raspuns;
     }
 
     Plangere(){
@@ -25,6 +26,7 @@ public class Plangere implements Parcelable {
         email = in.readString();
         userId = in.readString();
         status = in.readString();
+        raspuns = in.readString();
     }
 
     public static final Creator<Plangere> CREATOR = new Creator<Plangere>() {
@@ -87,6 +89,14 @@ public class Plangere implements Parcelable {
         this.status = status;
     }
 
+    public String getRaspuns() {
+        return raspuns;
+    }
+
+    public void setRaspuns(String raspuns) {
+        this.raspuns = raspuns;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -100,6 +110,7 @@ public class Plangere implements Parcelable {
         parcel.writeString(email);
         parcel.writeString(userId);
         parcel.writeString(status);
+        parcel.writeString(raspuns);
 
     }
 }
