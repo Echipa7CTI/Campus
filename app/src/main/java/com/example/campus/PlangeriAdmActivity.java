@@ -17,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class PlangeriAdmActivity extends AppCompatActivity {
 
@@ -41,7 +42,7 @@ public class PlangeriAdmActivity extends AppCompatActivity {
     }
 
     private void bdPlangeri() {
-        Query query = FirebaseDatabase.getInstance().getReference("Plangeri").orderByChild("status").equalTo("Nerevizuit");
+        Query query = FirebaseDatabase.getInstance().getReference("Plangeri");
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -49,7 +50,10 @@ public class PlangeriAdmActivity extends AppCompatActivity {
                 listPlangere.clear();
                 for (DataSnapshot ds : snapshot.getChildren()) {
                     Plangere plangereObj = ds.getValue(Plangere.class);
-                    listPlangere.add(plangereObj);
+                    String status = plangereObj.getStatus();
+                    if(Objects.equals(status, "Nerevizuit")){
+                        listPlangere.add(plangereObj);
+                    }
                 }
                 adapter.notifyDataSetChanged();
             }
