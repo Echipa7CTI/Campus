@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardView"
     android:layout_width="320dp"
-    android:layout_height="120dp"
+    android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="15dp"
     android:orientation="vertical"
@@ -20,24 +20,33 @@
             android:textSize="23sp"
             android:textAlignment="center"/>
 
+        <TextView
+            android:id="@+id/dataAnuntItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bara"
+            android:layout_marginTop="-25dp"
+            android:text="data"
+            android:textAlignment="textEnd"
+            android:textSize="14sp" />
+
         <View
             android:id="@+id/bara"
             android:layout_width="match_parent"
             android:layout_height="0.2dp"
-            android:background="@color/colorBlack"
-            android:layout_below="@id/titluAnuntItem"/>
+            android:layout_below="@id/titluAnuntItem"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorBlack" />
 
         <TextView
             android:id="@+id/textAnuntItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/bara"
+            android:layout_marginTop="10dp"
             android:text="Text anunt"
             android:textAlignment="center"
-            android:textSize="16sp"
-            android:layout_below="@+id/bara"
-            android:layout_marginLeft="10sp"
-            android:layout_marginTop="10dp"
-            />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 

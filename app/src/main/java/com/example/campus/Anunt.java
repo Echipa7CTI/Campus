@@ -4,13 +4,14 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Anunt implements Parcelable {
-    String textAnunt, titluAnunt, uploadId;
+    String textAnunt, titluAnunt, uploadId, data;
     boolean isExpanded;
 
-    public Anunt(String textAnunt, String titluAnunt, String uploadId) {
+    public Anunt(String textAnunt, String titluAnunt, String uploadId, String data) {
         this.textAnunt = textAnunt;
         this.titluAnunt = titluAnunt;
         this.uploadId = uploadId;
+        this.data = data;
     }
 
     public Anunt(){
@@ -21,6 +22,7 @@ public class Anunt implements Parcelable {
         textAnunt = in.readString();
         titluAnunt = in.readString();
         uploadId = in.readString();
+        data = in.readString();
     }
 
     public static final Creator<Anunt> CREATOR = new Creator<Anunt>() {
@@ -67,6 +69,14 @@ public class Anunt implements Parcelable {
         isExpanded = expanded;
     }
 
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -77,5 +87,6 @@ public class Anunt implements Parcelable {
         parcel.writeString(textAnunt);
         parcel.writeString(titluAnunt);
         parcel.writeString(uploadId);
+        parcel.writeString(data);
     }
 }

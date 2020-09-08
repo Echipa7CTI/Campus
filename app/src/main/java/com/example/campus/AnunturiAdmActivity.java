@@ -19,9 +19,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 public class AnunturiAdmActivity extends AppCompatActivity {
@@ -46,6 +49,7 @@ public class AnunturiAdmActivity extends AppCompatActivity {
         posteazaAnuntBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
                 String titlu = String.valueOf(titluAnunt.getText());
                 String text = String.valueOf(textAnunt.getText());
                 if (Objects.equals(titlu, "")) {
@@ -53,7 +57,7 @@ public class AnunturiAdmActivity extends AppCompatActivity {
                 } else if (Objects.equals(text, "")) {
                     Toast.makeText(AnunturiAdmActivity.this, "Introdu textul anuntului!", Toast.LENGTH_SHORT).show();
                 } else {
-                    posteazaAnunt(titlu, text);
+                    posteazaAnunt(titlu, text, currentDate);
                     titluAnunt.setText("");
                     textAnunt.setText("");
                 }
@@ -91,7 +95,7 @@ public class AnunturiAdmActivity extends AppCompatActivity {
         });
     }
 
-    private void posteazaAnunt(String titlu, String text) {
+    private void posteazaAnunt(String titlu, String text, String data) {
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Anunturi");
         String uploadId = ref.push().getKey();
@@ -100,6 +104,7 @@ public class AnunturiAdmActivity extends AppCompatActivity {
         hashMap.put("titluAnunt", titlu);
         hashMap.put("textAnunt", text);
         hashMap.put("uploadId", uploadId);
+        hashMap.put("data", data);
 
         ref.child(uploadId).setValue(hashMap);
 

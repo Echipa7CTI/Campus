@@ -43,7 +43,7 @@ public class AnuntUserAdapter extends RecyclerView.Adapter<AnuntUserAdapter.Anun
         final Anunt anunt= arrayListAnunt.get(position);
         holder.textAnuntTxt.setText(anunt.getTextAnunt());
         holder.titluAnuntTxt.setText(anunt.getTitluAnunt());
-
+        holder.dataAnuntTxt.setText(anunt.getData());
     }
 
     @Override
@@ -53,13 +53,14 @@ public class AnuntUserAdapter extends RecyclerView.Adapter<AnuntUserAdapter.Anun
 
 
     public class AnuntUserAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
-        TextView textAnuntTxt, titluAnuntTxt;
+        TextView textAnuntTxt, titluAnuntTxt, dataAnuntTxt;
         CardView card;
 
         public AnuntUserAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             textAnuntTxt = itemView.findViewById(R.id.textAnuntItem);
             titluAnuntTxt = itemView.findViewById(R.id.titluAnuntItem);
+            dataAnuntTxt = itemView.findViewById(R.id.dataAnuntItem);
             card = itemView.findViewById(R.id.cardView);
             //itemView.setOnLongClickListener(this);
             itemView.setOnClickListener(new View.OnClickListener() {
