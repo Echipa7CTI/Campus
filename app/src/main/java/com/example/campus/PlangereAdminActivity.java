@@ -21,8 +21,9 @@ public class PlangereAdminActivity extends AppCompatActivity {
 
     TextView subiectPlangere, detalierePlangere;
     EditText raspunsPlangere;
-    RadioGroup status;
+    RadioGroup statusRG;
     Button send;
+    String status;
 
     Plangere plangere;
 
@@ -34,7 +35,7 @@ public class PlangereAdminActivity extends AppCompatActivity {
         subiectPlangere = findViewById(R.id.subiectPlangere);
         detalierePlangere = findViewById(R.id.detalierePlangere);
         raspunsPlangere = findViewById(R.id.text3);
-        status = findViewById(R.id.radioGrup);
+        statusRG = findViewById(R.id.radioGrup);
         send = findViewById(R.id.trimiteBtn);
 
         Intent i = getIntent();
@@ -48,32 +49,34 @@ public class PlangereAdminActivity extends AppCompatActivity {
 
         final String idPlangere = plangere.getUploadId();
 
+        statusRG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == R.id.radio_rezolvat) {
+                    status = "Rezolvat";
+                } else {
+                    status = "Nerezolvat";
+                }
+            }
+        });
+
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 final String raspuns = String.valueOf(raspunsPlangere.getText());
 
-                if(Objects.equals(raspuns, "") || status.getCheckedRadioButtonId() == -1){
+                if(Objects.equals(raspuns, "") || statusRG.getCheckedRadioButtonId() == -1){
                     Toast.makeText(PlangereAdminActivity.this, "Introduceti date corecte.", Toast.LENGTH_SHORT).show();
                 } else {
-                    status.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                        @Override
-                        public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                            if (i == R.id.radio_rezolvat) {
-                                trimiteRaspuns(idPlangere, "Rezolvat", raspuns);
-                            } else {
-                                trimiteRaspuns(idPlangere, "Nerezolvat", raspuns);
-                            }
-                        }
-                    });
+                    trimiteRaspuns(idPlangere, status, raspuns);
                 }
             }
         });
     }
 
     private void trimiteRaspuns(String idPlangere, String status, String raspuns) {
-        DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference().child("Contracte").child(idPlangere);
+        DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference("Plangeri").child(idPlangere);
         HashMap<String,Object> raspunde = new HashMap<>();
         raspunde.put("status", status);
         raspunde.put("raspuns", raspuns);
